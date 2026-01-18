@@ -1,0 +1,115 @@
+.create-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: auto;
+  width: fit-content;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.421
+  ); /* Lisätty läpinäkyvä taustaväri */
+  padding: 20px; /* Lisätty sisäistä tilaa */
+  border-radius: 10px; /* Lisätty pyöristetyt reunat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lisätty varjo */
+}
+
+.create-event-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-item {
+  justify-self: center;
+  justify-content: center;
+  justify-items: center;
+  min-width: 10%;
+}
+
+.custom-date-display {
+  width: 100%;
+  min-width: 140px;
+  max-width: 140px;
+  padding: 10px;
+  font-size: 1em;
+  font-family: inherit;
+  border: 2px solid #0097b2;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  text-align: center;
+  display: block; /* Estää yhden rivin ylivuodon */
+  min-height: 40px;
+  white-space: pre-wrap; /* Teksti menee riville */
+  overflow-y: auto; /* Lisää scrollauksen, jos liian pitkä */
+  z-index: 3000;
+}
+
+.date-input-field {
+  width: 100%;
+  max-width: 400px; /* Estää liiallisen leveyden kasvun */
+  min-height: 40px; /* Alustava korkeus */
+  padding: 10px;
+  font-size: 1em;
+  font-family: inherit;
+  border: 2px solid #0097b2;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Pakottaa uudet elementit pystysuuntaan */
+  flex-wrap: wrap;
+  overflow-y: auto; /* Lisää rullauksen tarvittaessa */
+  white-space: nowrap; /* Estää päivämäärien leviämisen sivulle */
+}
+.date-input-field:hover {
+  border-color: #0097b2;
+}
+.date-input-field:focus {
+  border-color: #0097b2;
+  box-shadow: 0 0 8px #0097b2;
+}
+.date-input-field::placeholder {
+  color: rgb(150, 150, 150);
+  text-transform: lowercase;
+}
+
+.date-input-field.error {
+  border: 2px solid #ff1500;
+}
+
+/*Pääasiallinen ei muokattava tekstikenttä*/
+.input-field-locked {
+  width: 100%;
+  max-width: 400px;
+  height: 20px;
+  padding: 10px;
+  font-size: 1.2em;
+  font-family: inherit;
+  text-transform: uppercase;
+  border: 3px solid #0097b2;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.error-forms {
+  color: red;
+}

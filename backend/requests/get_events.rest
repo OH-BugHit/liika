@@ -1,0 +1,6 @@
+POST http://localhost:3003/api/events/event_times
+Content-Type: application/json
+
+{
+    "EventID": 14
+}

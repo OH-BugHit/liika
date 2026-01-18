@@ -1,0 +1,183 @@
+.event-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  margin: auto;
+  width: fit-content;
+  max-width: 90vw;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: rgba(255,
+      255,
+      255,
+      0.421);
+  /* Lisätty läpinäkyvä taustaväri */
+  padding: 20px;
+  /* Lisätty sisäistä tilaa */
+  border-radius: 10px;
+  /* Lisätty pyöristetyt reunat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Lisätty varjo */
+}
+
+/* Liity tapahtumaan -painike */
+.join-btn {
+  position: relative;
+  padding: 15px 45px;
+  background: #194480;
+  border-radius: 10px;
+  outline-offset: -2px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: outline-offset 200ms ease;
+}
+
+.join-btn:hover {
+  color: #194480;
+  background: #ffffff;
+  outline-offset: 3px;
+  border: 2px solid #194480;
+  outline: 2px solid #194480;
+}
+
+.join-btn:active {
+  transform: scale(0.95);
+}
+
+/* Peruuta ilmoittautuminen */
+.leave-btn {
+  position: relative;
+  padding: 15px 45px;
+  background-color: #db4537;
+  border-radius: 10px;
+  border: 2px solid #801966;
+  outline: 2px solid #80195f;
+  outline-offset: -2px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: outline-offset 200ms ease;
+}
+
+.leave-btn:hover {
+  opacity: 0.9;
+}
+
+.time-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.time-child {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  margin: auto;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background-color: rgba(255,
+      255,
+      255,
+      0.421);
+  /* Lisätty läpinäkyvä taustaväri */
+  padding: 6px 14px;
+  /* Lisätty sisäistä tilaa */
+  border-radius: 10px;
+  /* Lisätty pyöristetyt reunat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Lisätty varjo */
+  text-align: center;
+}
+
+/* Mobiilinäkymä */
+@media (max-width: 500px) {
+  .time-child {
+    flex-direction: column;
+  }
+}
+
+/* Liitytty päivämäärä */
+.joined-time-btn {
+  position: relative;
+  padding: 8px 24px;
+  background: #05bd40;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: outline-offset 200ms ease;
+}
+
+.joined-time-btn:hover {
+  color: #194480;
+  background: #ffffff;
+}
+
+.joined-time-btn:active {
+  transform: scale(0.95);
+}
+
+/* Ei-liitytty päivämäärä */
+.not-joined-time-btn {
+  position: relative;
+  padding: 8px 24px;
+  background: #c72626;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: outline-offset 200ms ease;
+}
+
+.not-joined-time-btn:hover {
+  color: #194480;
+  background: #ffffff;
+}
+
+.not-joined-time-btn:active {
+  transform: scale(0.95);
+  color: #194480;
+}
+
+/* Valittu päivämäärä */
+.selected-joined {
+  box-shadow: 0px 0px 4px 3px #2af068;
+}
+
+.selected-not-joined {
+  box-shadow: 0px 0px 4px 3px #f92727;
+}
+
+.counter-icon {
+  background-color: #ffffff15;
+  border-radius: 10px;
+  height: 35px;
+  width: fit-content;
+  padding: 0px 10px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  /* Pystysuuntainen keskitys */
+  justify-content: center;
+  /* Vaakasuuntainen keskitys */
+  text-align: center;
+  /* Lisää tilaa ympärille */
+  align-self: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}

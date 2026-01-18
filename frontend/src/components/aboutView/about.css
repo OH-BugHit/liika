@@ -1,0 +1,32 @@
+.about-text-box {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  max-width: 680px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: rgba(255,
+      255,
+      255,
+      0.421);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: brightness(110%);
+}
+
+.about-item {
+  margin-bottom: 18px;
+  text-align: center;
+}

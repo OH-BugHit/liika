@@ -1,0 +1,157 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  margin: auto;
+  width: fit-content;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: rgba(255,
+      255,
+      255,
+      0.421);
+  /* Lisätty läpinäkyvä taustaväri */
+  padding: 20px;
+  /* Lisätty sisäistä tilaa */
+  border-radius: 10px;
+  /* Lisätty pyöristetyt reunat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Lisätty varjo */
+}
+
+.login-form {
+  display: flex;
+  gap: 8px;
+  text-align: center;
+}
+
+.btn {
+  margin: auto;
+  margin-top: 2%;
+  background-color: #0097b2;
+}
+
+.login-form-item {
+  justify-items: center;
+}
+
+.btn {
+  margin: auto;
+  margin-top: 2%;
+  background-color: #0097b2;
+}
+
+.btn:disabled {
+  background-color: rgba(159, 159, 159, 0.507);
+  cursor: default;
+}
+
+.btn:disabled:hover {
+  background-color: rgba(159, 159, 159, 0.507);
+  color: #ffffff;
+  transition: none;
+  box-shadow: none;
+}
+
+.btn:hover::before {
+  background-color: #007891;
+  /* Muuta väriä tähän */
+  color: #ffffff;
+  transition: width 0.6s ease-in-out;
+  /* Säädä täyttymisnopeutta */
+}
+
+.error-forms {
+  color: red;
+}
+
+.forms-btn {
+  border-radius: 5px;
+  border: none;
+  padding: 0.8em 5em;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: #0097b2;
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.forms-btn span {
+  position: relative;
+  z-index: 1;
+  /* Tuo teksti napin päälle */
+}
+
+.forms-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #007891;
+  /* Muuta väriä tähän */
+  color: #ffffff;
+  transition: width 0.6s ease-in-out;
+  /* Säädä täyttymisnopeutta */
+}
+
+.forms-btn:hover::before {
+  width: 100%;
+}
+
+.forms-btn:disabled {
+  background-color: rgba(159, 159, 159, 0.507);
+  cursor: default;
+}
+
+.forms-btn:disabled:hover::before {
+  width: 0;
+  cursor: default;
+}
+
+.loader {
+  margin: auto;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #0097b2 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #0097b2);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: animaatio 1s infinite linear;
+}
+
+@keyframes animaatio {
+  100% {
+    transform: scale(1) rotate(1turn);
+  }
+}
+
+/* Mobiilinäkymä: 100vw leveys */
+@media (max-width: 800px) {
+  .forms-btn {
+    border-radius: 5px;
+    padding: 1em 3em;
+    font-size: small;
+  }
+}
+
+@media (max-width: 400px) {
+  .forms-btn {
+    border-radius: 5px;
+    padding: 0.7em 2em;
+    font-size: small;
+  }
+}

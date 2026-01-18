@@ -1,0 +1,91 @@
+.notification-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 90%;
+  max-width: 80vw;
+}
+
+.notification {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 50px 50px;
+  font-size: large;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.189);
+  z-index: 9999;
+  border-radius: 10px;
+  width: fit-content;
+  max-width: 80vw;
+  text-align: center;
+  overflow: hidden;
+}
+
+.notification.success {
+  background-color: #ffffff1c;
+  color: #0b2e14;
+  backdrop-filter: brightness(150%) blur(10px);
+  border: 3px solid rgba(99, 175, 74, 0.54);
+  position: relative;
+}
+
+.notification.success::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-20deg);
+  animation: successKeyframes 0.7s ease-out forwards;
+  pointer-events: none;
+}
+
+.notification.error {
+  background-color: #ff737e33;
+  color: #000000;
+  backdrop-filter: brightness(150%) blur(10px);
+  border: 3px solid rgba(255, 48, 48, 0.613);
+  position: relative;
+  overflow: hidden;
+  animation: errorKeyframes 0.2s ease-out forwards;
+}
+
+
+.notification.warning {
+  background-color: #fff3cd7c;
+  color: #000000;
+  backdrop-filter: brightness(150%) blur(10px);
+  border: 3px solid rgba(160, 136, 0, 0.613);
+  position: relative;
+  overflow: hidden;
+  animation: errorKeyframes 0.2s ease-out forwards;
+}
+
+@keyframes successKeyframes {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes errorKeyframes {
+  from {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

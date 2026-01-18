@@ -1,0 +1,130 @@
+.joined-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  min-width: 400px;
+  width: fit-content;
+  background-color: rgba(255,
+      255,
+      255,
+      0.421);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-container {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Välilehtien kontti */
+.tab-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Yksittäinen välilehti */
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  border: none;
+  background-color: transparent;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab:hover {
+  color: #000;
+  background-color: #418fa729;
+}
+
+.active-tab {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid #007bff;
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: black;
+  margin-bottom: 9px;
+  margin-top: 9px;
+  text-align: center;
+  gap: 8px;
+}
+
+.event-item-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 10px;
+  color: black;
+  background-color: rgba(255,
+      255,
+      255,
+      0.421);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  gap: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.event-list-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.event-list-button {
+  background-color: #55bcd820;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: #418fa7bd 2px solid;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.event-list-button:hover {
+  background-color: #4190a7;
+}
+
+.event-list-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #418fa7bd;
+  background-color: #61e9f034;
+}
+
+@media (max-width: 800px) {
+  .joined-view {
+    min-width: 30px;
+    width: fit-content;
+  }
+}

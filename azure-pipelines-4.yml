@@ -1,0 +1,73 @@
+# Node.js React Web App to Linux on Azure
+# Build a Node.js React app and deploy it to Azure as a Linux web app.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+  - master
+
+variables:
+  # Azure Resource Manager connection created during pipeline creation
+
+  # Web app name
+  webAppName: "liikaservice"
+
+  # Environment name
+  environmentName: "liikaservice"
+
+stages:
+  - stage: Build
+    displayName: Build stage
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          name: "Omat"
+        steps:
+          # Build Frontend (rakennetaan frontend vain kerran)
+          - script: |
+              cd frontend
+              npm install && npm run build
+            displayName: "Build Frontend"
+
+          # Build Backend (vain kopioidaan frontendin tuotos, ei rakenneta uudelleen)
+          - script: |
+              cd backend
+              npm install
+            displayName: "Prepare Backend"
+
+          - task: ArchiveFiles@2
+            displayName: "Archive files"
+            inputs:
+              rootFolderOrFile: "$(System.DefaultWorkingDirectory)/backend"
+              includeRootFolder: false
+              archiveType: zip
+              archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+              replaceExistingArchive: true
+
+          - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+            artifact: drop
+
+  - stage: Deploy
+    displayName: Deploy stage
+    dependsOn: Build
+    condition: succeeded()
+    jobs:
+      - deployment: Deploy
+        displayName: Deploy
+        environment: $(environmentName)
+        pool:
+          name: "Omat"
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: AzureRmWebAppDeployment@4
+                  displayName: "Azure App Service Deploy: liikaservice"
+                  inputs:
+                    azureSubscription: $(azureSubscription)
+                    appType: webAppLinux
+                    WebAppName: $(webAppName)
+                    packageForLinux: "$(Pipeline.Workspace)/drop/$(Build.BuildId).zip"
+                    RuntimeStack: "NODE|20LTS"
+                    StartupCommand: "npm run start"

@@ -1,0 +1,147 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  align-items: center;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: fit-content;
+  background-color: rgba(255,
+      255,
+      255,
+      0.421);
+  /* Lisätty läpinäkyvä taustaväri */
+  padding: 20px;
+  /* Lisätty sisäistä tilaa */
+  border-radius: 10px;
+  /* Lisätty pyöristetyt reunat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Lisätty varjo */
+}
+
+.leaflet-control-geocoder-form input:focus {
+  color: #000 !important;
+  background-color: #ffffff;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.register-form-item {
+  justify-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.register-form-location-container {
+  max-width: 700px;
+  max-height: 700px;
+  justify-items: center;
+  padding: 0px 8px;
+}
+
+.error-forms {
+  color: red;
+}
+
+.send-otp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.otp-input-container {
+  display: flex;
+  justify-content: center;
+  /* Keskittää kentät vaakasuunnassa */
+  margin-bottom: 1rem;
+}
+
+.otp-input {
+  width: 40px;
+  height: 50px;
+  margin: 0 5px;
+  text-align: right;
+  font-size: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* Uudet väriasetukset */
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color: #007bff;
+  /* Tai haluamasi korostusväri */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  /* Tai haluamasi varjo */
+}
+
+/* Voit lisätä tarvittaessa tyylejä virhetiloille */
+.otp-input.error {
+  border-color: red;
+}
+
+.loader {
+  margin: auto;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #0097b2 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #0097b2);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: animaatio 1s infinite linear;
+}
+
+@keyframes animaatio {
+  100% {
+    transform: scale(1) rotate(1turn);
+  }
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.terms-container input[type="checkbox"] {
+  appearance: none;
+  /* Poistaa oletustyylit */
+  -webkit-appearance: none;
+  /* Safari ja Chrome */
+  -moz-appearance: none;
+  /* Firefox */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.terms-container input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.terms-container input[type="checkbox"]:checked::before {
+  content: "✔";
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  line-height: 20px;
+}

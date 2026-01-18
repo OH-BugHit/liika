@@ -1,0 +1,7 @@
+POST http://localhost:3003/api/register/verifyOtp
+Content-Type: application/json
+
+{
+    "email": "Liika2025@outlook.com",
+    "otp": "123456"
+}

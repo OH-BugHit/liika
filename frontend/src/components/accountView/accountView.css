@@ -1,0 +1,183 @@
+.account-view {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: auto;
+  width: fit-content;
+  max-width: 80dvw;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: rgba(255,
+      255,
+      255,
+      0.421);
+  /* Lisätty läpinäkyvä taustaväri */
+  padding: 20px;
+  /* Lisätty sisäistä tilaa */
+  border-radius: 10px;
+  /* Lisätty pyöristetyt reunat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Lisätty varjo */
+}
+
+.account-view-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.information-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 23px;
+  justify-content: space-between;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.save-btn {
+  width: 20;
+  height: 20;
+  opacity: 1;
+  color: black;
+  background-color: rgb(104, 255, 162);
+  border: 2px solid #198065;
+  width: 200px;
+}
+
+.save-btn:hover {
+  color: #ffffff;
+  background: #00b24a;
+  outline-offset: 3px;
+  border: 2px solid #198065;
+  outline: 2px solid #198072;
+}
+
+.save-btn:disabled {
+  background-color: rgba(159, 159, 159, 0.507);
+  cursor: default;
+  border: 2px solid rgba(159, 159, 159, 0.507);
+  outline: 2px solid rgba(159, 159, 159, 0.507);
+}
+
+.delete-account-btn {
+  width: 20;
+  height: 20;
+  opacity: 1;
+  background-color: rgb(255, 61, 61);
+  width: 200px;
+}
+
+.delete-account-btn:hover {
+  color: rgb(0, 0, 0);
+}
+
+.slider-container {
+  width: 60vw;
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.slider-toggle {
+  background-color: #3498db;
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  transition: background-color 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.slider-toggle:hover {
+  background-color: #2980b9;
+}
+
+.slider-toggle.active {
+  background-color: #1abc9c;
+}
+
+.slider-panel {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.slider-input {
+  overflow: visible;
+  height: 100%;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+  pointer-events: auto;
+  /* Ensure slider works when active */
+}
+
+.slider-input.inactive {
+  pointer-events: none;
+  /* Disable pointer events when slider is inactive */
+}
+
+.slider-input:hover {
+  background: #3498db;
+}
+
+.slider-wrapper p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.set-overlay {
+  position: absolute;
+  height: 40vh;
+  width: 80vw;
+  overflow: hidden;
+  backdrop-filter: saturate(150%) brightness(82%) contrast(165%) hue-rotate(30deg);
+  background: rgba(255, 244, 202, 0);
+  z-index: 3000;
+  pointer-events: none;
+}
+
+/* Mobiilinäkymä */
+@media (max-width: 350px) {
+  .information-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .link-btn {
+    width: 75px;
+  }
+
+  .delete-account-btn {
+    width: 120px;
+  }
+}

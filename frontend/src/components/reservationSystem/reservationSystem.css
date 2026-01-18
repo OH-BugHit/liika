@@ -1,0 +1,203 @@
+.system-item-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 90%;
+    margin: auto;
+    background-color: rgba(186, 255, 250, 0.157);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.system-modify-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 90%;
+    /* Lisätty sisäistä tilaa */
+    border-radius: 10px;
+    /* Lisätty pyöristetyt reunat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.017);
+    /* Lisätty varjo */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.modify-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    max-width: 90%;
+    /* Lisätty sisäistä tilaa */
+    border-radius: 10px;
+    /* Lisätty pyöristetyt reunat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.017);
+    /* Lisätty varjo */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.system-view-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+    background-color: rgba(186, 255, 250, 0.157);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.system-view-item {
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+
+.field-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px 0px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.edit-field-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    max-width: 100dvw;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: brightness(110%);
+}
+
+.add-new-panel {
+    width: 100%;
+    max-height: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    opacity: 0.7;
+    transition: max-height 0.8s ease;
+    background: rgba(219, 255, 254, 0.486);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Paneelin avoin tila */
+.system-view-field-panel.open,
+.open.add-new-panel.open {
+    max-height: 1000vh;
+    opacity: 1;
+}
+
+.system-view-field-panel,
+.field-calendar-panel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0.7;
+    transition: max-height 0.8s ease;
+}
+
+/* Paneelin avoin tila */
+.field-calendar-panel.open {
+    margin-top: 10px;
+    overflow: visible;
+    max-height: 1000vh;
+    opacity: 1;
+}
+
+.single-weekday {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.field-calendar-navigation {
+    top: 0;
+    display: flex;
+    transform: translateY(50%);
+    flex-direction: column;
+    position: sticky;
+    height: 70dvh;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.field-calendar-navigation-button {
+    margin: 0;
+    padding: 40px 0px;
+    color: black;
+    font-size: large;
+    background-color: rgba(251, 255, 254, 0.125);
+    border-color: rgba(93, 167, 167, 0.316);
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    max-width: 10dvw;
+    max-height: 10%;
+}
+
+.field-calendar-navigation-button:hover {
+    border-color: rgba(93, 167, 167, 0.496);
+    backdrop-filter: blur(10px) brightness(110%);
+}
+
+.field-calendar-navigation-button:active {
+    transform: scale(0.95);
+}
+
+.field-category-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
